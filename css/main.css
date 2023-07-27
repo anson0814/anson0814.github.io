@@ -130,4 +130,10 @@
     margin-bottom: 30px;
   }
 
+  h1{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: var(--font-size-huge);
+    color: var(--blue);
+  }
+
 
