@@ -63,7 +63,7 @@
     justify-content: center;
 }
   
-  .header{
+  .jumbotrons{
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
         url('../img/vancouver.jpg'); /*image from: https://photokaz.com/blog/2014/04/05/vancouver-long-exposure-black-white/*/
   }
