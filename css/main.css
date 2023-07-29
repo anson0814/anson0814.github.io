@@ -63,10 +63,19 @@
     justify-content: center;
 }
   
+  .header{
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+        url('../img/vancouver.jpg'); /*image from: https://photokaz.com/blog/2014/04/05/vancouver-long-exposure-black-white/*/
+  }
 
   .body {
       font-family: 'Nunito Sans', sans-serif;
     }
+
+
+  .btn-primary{
+    background-color: #0088CC;
+  }
 
   /* FOOTER */
   footer {
@@ -74,7 +83,7 @@
     color: #FFFFFF;
     padding: 30px 0;
     text-align: center;
-    padding: var(--gutter-medium) 0 var(--gutter-normal);
+    padding: var(--gutter-normal) 0 var(--gutter-normal);
   }
   
   .footer-content {
@@ -84,7 +93,7 @@
   }
   
   .footer-section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
   
   .footer-section h3 {
@@ -117,7 +126,7 @@
   .footer__social-links {
     display: flex;
     justify-content: center;
-    padding: var(--gutter-normal) 0;
+    padding:  1rem;
     list-style: none;
 }
 
@@ -126,7 +135,7 @@
   }
 
   .footer__social-image {
-    height: 4rem;
+    height: 2.5rem;
   }
 
 
