@@ -57,6 +57,8 @@
     color: black;
   }
 
+ 
+
   .row {
     max-width: var(--container-max-width);
     margin: 0 auto;
@@ -68,6 +70,7 @@
         url('../img/vancouver.jpg'); /*image from: https://photokaz.com/blog/2014/04/05/vancouver-long-exposure-black-white/*/
   }
 
+ 
   .body {
       font-family: 'Nunito Sans', sans-serif;
     }
@@ -138,7 +141,13 @@
     height: 2.5rem;
   }
 
+  .card-img-top{
+    height: 12rem;
+  }
 
+  #portfolio {
+    padding: 2rem 0;
+  }
 
   /* STYLE GUIDE */
   .primary-blue-bg {
