@@ -54,6 +54,11 @@
     padding-bottom: 2rem;
   }
 
+  .navbar-brand-container {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-grow: 1; /* Allow the container to take up the remaining space */
+  }
  
 
   .row {
