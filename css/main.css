@@ -45,16 +45,13 @@
   }
 
   .navbar {
-      background-color: var(--grey) !important;
+      background-color: #333333 !important;
       font-family: 'Nunito Sans', sans-serif;
-    }
-  
-  .navbar-nav .nav-link {
-    color: black !important; /* Replace this with your desired color */
+      color: var(--black);
     }
 
-  .navbar-toggler{
-    color: black;
+  .col-md-6{
+    padding-bottom: 2rem;
   }
 
  
@@ -185,3 +182,9 @@
   }
 
 
+
+  @media (max-width: 768px) {
+    .col-md-6 {
+      text-align: center;
+    }
+  }

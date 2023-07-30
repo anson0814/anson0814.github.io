@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI/UX Design and Interaction Design Project</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Your Logo" width="30" height="50">
+    </a>      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="container mt-4">
+        <h1>ICBC e-Forms Rebranding</h1>
+        <h2>Tech Stack</h2>
+        <ul>
+            <li>JIRA</li>
+            <li>Axure</li>
+            <li>Jenkins</li>
+            <li>HTML/CSS</li>
+            <li>Bootstrap</li>
+            <ul>
+                <li>Sass (Syntactically Awesome Style Sheets)</li>
+            </ul>
+            <li>Node</li>
+            <ul>
+                <li>Express.js</li>
+                <li>Gulp.js</li>
+            </ul>
+            <li>TortoiseSVN</li>
+        </ul>
+
+        <h2>Team</h2>
+        <p>In this project, there was a total of five people involved:</p>
+        <ul>
+            <li>Myself as the primary developer</li>
+            <li>Senior developer who provided support and guidance</li>
+            <li>Business Systems Analyst to set deadlines and coordinate</li>
+            <li>Contractor/e-Forms Specialist for QA Testing</li>
+            <li>User Experience Analyst for UX Testing</li>
+        </ul>
+
+        <p>
+            As part of a team of five individuals, including myself, I served as the main developer on a project to rebrand
+            the five most commonly used e-forms for the company. Our team also included a senior developer to support and
+            guide me, a business systems analyst to coordinate and set a schedule, a functionality tester, and a UX analyst
+            to ensure the updates met our company's standards.
+        </p>
+
+        <p>
+            Using the company's digital style guide as a reference, I updated the Sass code (which is used in Bootstrap) and
+            HTML of the e-forms to align with the company's current branding. To compile the Sass into one CSS file, I used
+            gulp.js, and the resulting CSS file was committed to the Tortoise SVN repository. Lastly, Jenkins was used to
+            deploy the updated forms in the appropriate environment.
+        </p>
+
+        <p>
+            To ensure that the updated e-forms were functioning correctly, I used Express.js, a popular Node.js framework,
+            for local testing to avoid running a Jenkins build upon every small update. Upon finishing the development and
+            conducting my own tests, I handed the forms off to our UX analyst and functionality tester, who provided feedback
+            in Jira. Through thorough testing and attention to detail, we ensured that the rebranded e-forms were functional
+            and conformed to the company's digital brand guidelines.
+        </p>
+
+        <h2>Thank You Page Before Update</h2>
+        <img src="thank_you_page_before_update.jpg" alt="Thank You Page Before Update" class="img-fluid">
+
+        <h2>Thank You Page After Update</h2>
+        <img src="thank_you_page_after_update.jpg" alt="Thank You Page After Update" class="img-fluid">
+
+        <h2>Updated Forms:</h2>
+        <ol>
+            <li>
+                <strong>ACG398 (Payment Deferral)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/ACG398.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>GEN371 (Ask a Question)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/feedback_customer_relations.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>WEB1812 (Witness Information)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/witness_information.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>CL476 (Child Seat Reimbursement)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/CL476.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>GEN508 (Fraud Tips)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/GEN508.jsp">Link to Form</a>
+            </li>
+        </ol>
+    </div>
+
+    <script src="path/to/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
