@@ -249,8 +249,9 @@
   }
 
   @media (max-width: 768px) {
+    /*
     .col-md-6 {
       text-align: center;
-    }
+    }*/
   }
   
