@@ -153,6 +153,15 @@
     text-align: center;
   }
 
+  .card-body img {
+    transition: transform 0.2s ease-in-out;
+}
+
+  .card-body img:hover {
+      transform: scale(1.05);
+  }
+
+
   #portfolio {
     padding: 2rem 0;
   }
