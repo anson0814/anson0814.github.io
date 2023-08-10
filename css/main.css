@@ -75,6 +75,11 @@
       font-family: 'Nunito Sans', sans-serif;
     }
 
+    .paragraph {
+      margin-bottom: 1.5em; 
+  }
+  
+
 
   .btn-primary{
     background-color: #0088CC;
