@@ -256,6 +256,12 @@
     padding: 10px;
   }
 
+  .dark-grey-bg {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+  }
+
   .section {
     margin-bottom: 30px;
   }
