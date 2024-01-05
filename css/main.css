@@ -47,11 +47,29 @@
   .navbar {
       background-color: #333333 !important;
       font-family: 'Nunito Sans', sans-serif;
+      font-size: large;
       color: var(--black);
     }
   
   .nav-link{
     color: white !important;
+  }
+
+  .custom-navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 10rem;  /* Adjust the left padding as needed */
+    padding-right: 10rem; /* Adjust the right padding as needed */
+}
+
+  .navbar-brand:hover {
+    transform: scale(1.05); /* Scale the logo on hover (adjust as needed) */
+  }
+
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #00AAFF !important; 
+    transition: color 0.3s ease;
+    text-decoration: underline;
   }
 
   .col-md-6{
@@ -273,7 +291,7 @@
   }
 
   .nameheader{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 900;
   }
 
@@ -303,11 +321,25 @@
     margin-left: 20px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     /*
     .col-md-6 {
       text-align: center;
     }*/
+
+    .custom-navbar {
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
+      padding-left: 1rem;  /* Adjust the left padding as needed */
+      padding-right: 1rem; /* Adjust the right padding as needed */
+  }
+
+  .nameheader{
+    font-size: 3.5rem;
+    font-weight: 900;
+  }
+
+
 
   
   }
