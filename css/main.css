@@ -76,6 +76,10 @@
     padding-bottom: 2rem;
   }
 
+  .col-md-4{
+    margin-bottom: 2rem;
+  }
+
   .navbar-brand-container {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -113,7 +117,7 @@
   footer {
     background-color: #333333;
     color: #FFFFFF;
-    padding-top: 30px;
+    padding-top: 0px;
     text-align: center;
     padding: var(--gutter-normal) 0 var(--gutter-normal);
   }
@@ -199,9 +203,11 @@
 
   #portfolio {
     padding: 2rem 0;
+    margin-bottom: 0;
   }
 
   .portfolio-header{
+    margin-top: 2rem;
     padding-bottom: 1rem;
     text-decoration: underline;
   }
@@ -342,10 +348,18 @@
     font-weight: 900;
   }
 
-
-
   
   }
+
+  @media (min-width: 576px){
+  .jumbotron {
+      padding: 13rem 2rem;}
+  }
+
+  .jumbotron {
+    margin: 0;
+  }
+    
 
   /*Citation Styles*/
   .citation-container{
