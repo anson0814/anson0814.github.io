@@ -64,6 +64,7 @@
 
   .navbar-brand:hover {
     transform: scale(1.05); /* Scale the logo on hover (adjust as needed) */
+    transition: transform 0.3s ease;
   }
 
   .navbar-nav .nav-item:hover .nav-link {
@@ -168,6 +169,11 @@
 
   .footer__social-link-item:not(:last-of-type) {
     margin-right: var(--gutter-small);
+  }
+
+  .footer__social-link-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
 
   .footer__social-image {
@@ -357,7 +363,7 @@
 
   @media (min-width: 576px){
   .jumbotron {
-      padding: 13rem 2rem;}
+      padding: 11rem 2rem;}
   }
 
   .jumbotron {
