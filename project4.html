@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/logo.svg" />
+    <title>PotBot: Personalized AI Hot Pot Builder</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+      <div class="navbar-brand-container">
+          <a class="navbar-brand" href="index.html">
+              <img src="img/logo.png" alt="Your Logo" width="36" height="60">
+          </a>
+      </div>  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view">Resume</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="container mt-4">
+        <h1 class="text-center project-title">ICBC e-Forms Rebranding</h1>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-left">
+                        <h3 class="text-center card-title">Tech Stack</h3>
+                        <ul class="main-list">
+                          <li>JIRA</li>
+                          <li>Axure</li>
+                          <li>Jenkins</li>
+                          <li>HTML/CSS</li>
+                          <li class="has-sub-list">Bootstrap
+                              <ul class="sub-list">
+                                  <li>Sass (Syntactically Awesome Style Sheets)</li>
+                              </ul>
+                          </li>
+                          <li>Node
+                              <ul class="sub-list">
+                                  <li>Express.js</li>
+                                  <li>Gulp.js</li>
+                              </ul>
+                          </li>
+                          <li>TortoiseSVN</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-left">
+                        <h3 class="text-center card-title">Team</h3>
+                        <p>In this project, there was a total of five people involved:</p>
+                        <ul class="main-list">
+                            <li>Myself as the primary developer</li>
+                            <li>Senior developer who provided support and guidance</li>
+                            <li>Business Systems Analyst to set deadlines and coordinate</li>
+                            <li>Contractor/e-Forms Specialist for QA Testing</li>
+                            <li>User Experience Analyst for UX Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+        <p>
+            As part of a team of five individuals, including myself, I served as the main developer on a project to rebrand
+            the five most commonly used e-forms for the company. Our team also included a senior developer to support and
+            guide me, a business systems analyst to coordinate and set a schedule, a functionality tester, and a UX analyst
+            to ensure the updates met our company's standards.
+        </p>
+
+        <p>
+            Using the company's digital style guide as a reference, I updated the Sass code (which is used in Bootstrap) and
+            HTML of the e-forms to align with the company's current branding. To compile the Sass into one CSS file, I used
+            gulp.js, and the resulting CSS file was committed to the Tortoise SVN repository. Lastly, Jenkins was used to
+            deploy the updated forms in the appropriate environment.
+        </p>
+
+        <p>
+            To ensure that the updated e-forms were functioning correctly, I used Express.js, a popular Node.js framework,
+            for local testing to avoid running a Jenkins build upon every small update. Upon finishing the development and
+            conducting my own tests, I handed the forms off to our UX analyst and functionality tester, who provided feedback
+            in Jira. Through thorough testing and attention to detail, we ensured that the rebranded e-forms were functional
+            and conformed to the company's digital brand guidelines.
+        </p>
+
+        <h2 class="text-center">Outcome</h2>
+
+        <p>
+          Upon completing this project, I felt very accomplished as I had the opportunity to work on a high-impact project that made a significant
+          impact on the company. In fact, I have come across these updated e-forms in real-world usage since making these updates, which has
+          reinforced my satisfaction with my work and the outcomes of the project. I learned a lot throughout the duration of this project as it was my
+          first exposure to many technologies such as Sass, Jenkins, and Express.js.
+          Thanks to the collaborative efforts of our team, the rebranded e-forms provided a cohesive and professional image across all of our e-forms,
+          improving the user experience and reinforcing our brand identity.
+        </p>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+              <div class="card h-100">
+                  <div class="card">
+                      <h4 class="card-header text-center">Thank You Page Before Update</h4>
+                      <a href="./img/project3/thankyou-old.png" target="_blank">
+                          <img src="./img/project3/thankyou-old.png" alt="Thank You Page Before Update" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card h-100">
+                  <div class="card">
+                      <h4 class="card-header text-center">Thank You Page After Update</h4>
+                      <a href="./img/project3/thankyou-new.png" target="_blank">
+                          <img src="./img/project3/thankyou-new.png" alt="Thank You Page After Update" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row mt-4">
+          <div class="col-md-6">
+              <div class="card h-100">
+                  <div class="card">
+                      <h4 class="card-header text-center">Fraud Tips Form Before Update</h4>
+                      <a href="./img/project3/fraud-tips-old.png" target="_blank">
+                          <img src="./img/project3/fraud-tips-old.png" alt="Fraud Tips Form Before Update" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card h-100">
+                  <div class="card">
+                      <h4 class="card-header text-center">Fraud Tips Form After Update</h4>
+                      <a href="./img/project3/fraud-tips-new.png" target="_blank">
+                          <img src="./img/project3/fraud-tips-new.png" alt="Fraud Tips Form After Update" class="img-fluid">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="icbc-list text-center">
+        <h2>Updated Forms</h2>
+        <ol>
+            <li>
+                <strong>ACG398 (Payment Deferral)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/ACG398.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>GEN371 (Ask a Question)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/feedback_customer_relations.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>WEB1812 (Witness Information)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/witness_information.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>CL476 (Child Seat Reimbursement)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/CL476.jsp">Link to Form</a>
+            </li>
+            <li>
+                <strong>GEN508 (Fraud Tips)</strong>
+                <a href="https://onlinebusiness.icbc.com/eforms/dotcom/jsp/GEN508.jsp">Link to Form</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <a href="styleguide.html">
+            <h3 class="bootstrap-link">Style Guide</h3>
+          </a>
+        
+        </div>
+
+        <div class="footer-section">
+          <a href="citations.html">
+            <h3 class="bootstrap-link">Citations</h3>
+          </a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:ala207@sfu.ca">ala207@sfu.ca</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 (604) 366-8928</a></p>
+        </div>          
+
+      <div class="row">
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a href="https://github.com/anson0814" title="Link to Github Profile">
+              <img src="./img/github.svg" class="footer__social-image" alt="Github">
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="https://www.linkedin.com/in/anson-lin-987201175/">
+              <img src="./img/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
+    </footer>
+
+    <script src="path/to/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
