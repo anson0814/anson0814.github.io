@@ -53,6 +53,8 @@
   
   .nav-link{
     color: white !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 
   .custom-navbar {
@@ -223,6 +225,10 @@
     background-size: cover; 
     border-radius: 0;
     
+  }
+
+  .header-text{
+    margin-bottom: 1.5rem;
   }
 
   /*ABOUT SECTION STYLES*/
