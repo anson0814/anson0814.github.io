@@ -311,9 +311,19 @@
     color: var(--blue);
   }
 
+  h4{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
   .nameheader{
     font-size: 5rem;
     font-weight: 900;
+  }
+
+  .listheading{
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 
   .project-title{
