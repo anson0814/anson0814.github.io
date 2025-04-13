@@ -14,6 +14,7 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
@@ -71,6 +72,18 @@
         <div class="container">
           <h2 class="portfolio-header ">━━━━━━ My Work ━━━━━━</h2>
           <div class="row">
+            <div class="col-md-4">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/project5/library-hub-thumbnail.png" class="card-img-top" alt="Branded Editions Project">
+                <div class="card-body">
+                  <h5 class="card-title">Branded Editions Templates</h5>
+                  <p class="card-text">Reusable landing page templates for international publishers at PressReader.</p>
+                </div>
+                <div class="mt-auto pb-3 px-3">
+                  <a href="project5.html" class="btn btn-primary btn-block px-3">View Project</a>
+                </div>
+              </div>
+            </div>
             <div class="col-md-4">
               <div class="card h-100 d-flex flex-column">
                 <img src="img/project4/conceptslide.png" class="card-img-top" alt="Project 3">
@@ -162,6 +175,15 @@
         </div>
 
       </footer>
+      
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          once: true,
+          duration: 600,
+          easing: 'ease-in-out',
+        });
+      </script>
 
       <script src="path/to/bootstrap.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
