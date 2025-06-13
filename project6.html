@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkoutPal: A UX-Focused Mobile Development Project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.svg" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -28,27 +29,52 @@
     <h1 class="project-title">
         <span style="color: var(--blue);">WorkoutPal</span>
     </h1>
-    <h3 class="project-subtitle" style="color: var(--black);">
+    <h4 class="project-subtitle" style="color: var(--black);">
         Designing and Developing A UX-Focused Android Workout App
-    </h3>
+    </h4>
 </div>
 
-<div class="col-mb-5">
+<div class="mb-5">
     <div class="text-center">
         <a href="./img/project6/Overview.png" target="_blank">
-            <img src="./img/project6/Overview.png" alt="Thank You Page Before Update" class="img-fluid rounded">
+            <img src="./img/project6/Overview.png" alt="WorkoutPal Thumbnail" class="img-fluid rounded">
         </a>
     </div>
 </div>
 
-    <!-- Origins Section with Card (only this section modified) -->
+<div class="row justify-content-center mb-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-left">
+                <h3 class="text-center card-title">Tech Stack</h3>
+                <ul class="main-list">
+                    <li>Android Studio</li>
+                    <li>Java (Android SDK)</li>
+                    <li>XML (UI Layouts)</li>
+                    <li class="has-sub-list">Android Framework Components
+                        <ul class="sub-list">
+                            <li>SensorManager (Accelerometer, Gyroscope)</li>
+                            <li>SharedPreferences</li>
+                            <li>SQLite (Local Database)</li>
+                        </ul>
+                    </li>
+                    <li>Google Maps & Places API</li>
+                    <li>Figma (Wireframes & UI Planning)</li>
+                    <li>GitHub (Version Control)</li>
+                </ul>
+            </div>
+            <p class="text-center mb-3"><strong>Role:</strong> UX Designer, Android Developer</p>
+        </div>
+    </div>
+</div>
+
     <div class="section mb-5">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="text-center mb-4" style="color: var(--blue);">Inspiration and Problem Space</h2>
-                        <div class="pl-3 pr-3 text-left">  <!-- Only affects this container -->
+                        <div class="pl-3 pr-3 text-left"> 
                             <p class="mb-3">
                                 Many gym-goers still rely on pen-and-paper or basic notes apps to track workouts and this manual approach is inconvenient and lacks structure. WorkoutPal was conceptualized to streamline this experience, especially among beginners and intermediate users. The goal was to design and build a mobile application that combines intelligent workout logging with sensor-based feedback and clean visual data representation, all within the constraints of a 13-week course. <br>
 
@@ -85,7 +111,7 @@
                 </div>
             </div>
             
-            <h3 class="mt-4 mb-2">Database Architecture</h3>
+            <h3 class="mt-4 mb-3">Database Architecture</h3>
             <div class="row">
                 <div class="col-md-6">
                     <p>The SQLite implementation presented my first major design challenge. Early versions only stored workout names because I underestimated the complexity of relational data in mobile environments. After encountering partial data saves, I had to completely rethink my approach.</p>
@@ -93,16 +119,16 @@
                     <p>Through Logcat debugging, I identified the root cause: my initial implementation treated each data point (sets, reps, weight) as independent inserts rather than a transactional unit. This led to situations where a workout name would save but the associated exercises wouldn't persist.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>The solution involved implementing proper database transactions and adding validation checks. This experience taught me that data architecture decisions directly impact user experience - what good is a workout tracker that loses your progress? I documented these learnings extensively in my Milestone 2 report, emphasizing the importance of atomic operations for data integrity.</p>
+                    <p>The solution involved implementing proper database transactions and adding validation checks. This experience taught me that data architecture decisions directly impact user experience as what good is a workout tracker that loses your progress?</p>
                 </div>
             </div>
 
-            <h3 class="mt-5 mb-2">Sensor Integration</h3>
+            <h3 class="mt-2 mb-3">Sensor Integration</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <p>Incorporating the accelerometer and gyroscope required careful UX consideration. While the technical implementation was straightforward (thanks to Android's SensorManager), deciding how to present this data demanded more thought.</p>
+                    <p>Incorporating the accelerometer and gyroscope required UX consideration. While the technical implementation was straightforward with Android SensorManager, deciding how to present this data demanded more thought.</p>
                     
-                    <p>I positioned the sensor readouts at the bottom of the workout screen after testing several layouts. This placement achieved several goals:</p>
+                    <p>I ended up positioning the sensor readings at the bottom of the workout activity after testing several layouts. This placement achieved several goals:</p>
                     <ul>
                         <li>Kept the focus on workout logging (primary task)</li>
                         <li>Made sensor data glanceable but not distracting</li>
@@ -110,11 +136,11 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <p>While the sensors were posting output and functioning correctly, their real value would come from better interpretation of the raw data. For example, future versions could analyze movement patterns to detect poor form or count repetitions automatically. The use case for these direct values were more niche and probably more suited to intermediate to advanced level lifters who might have certain optimization they could do with things like bench angles (Using the gyroscope data).</p>
+                    <p>While the sensors were posting output and functioning correctly, their real value would come from better interpretation of the raw data. For example, future versions could analyze movement patterns to detect poor form or count repetitions automatically. The use case for these direct values were more niche and probably more suited to intermediate to advanced level lifters who might want to optimize aspects like bench angles (Using the gyroscope data).</p>
                 </div>
             </div>
 
-            <h3 class="mt-5 mb-3">Maps API Challenges</h3>
+            <h3 class="mt-2 mb-3">Maps API Challenges</h3>
             <div class="row">
                 <div class="col-md-12">
                     <p>The gym-finding feature evolved significantly through development. My initial approach using FindCurrentPlaceRequest failed because, as I discovered, gym locations don't have consistent tagging like restaurants or banks. This was a valuable lesson in API limitations and the importance of prototyping core features early.</p>
@@ -124,6 +150,27 @@
                     <p>This experience reinforced the importance of comprehensive API research before implementation. It also highlighted how technical hurdles can directly impact user experience, had I not resolved this, the entire maps functionality would have been unusable.</p>
                 </div>
             </div>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h4 class="card-header text-center">Exhaustive Search List Attempt</h4>
+                    <a href="./img/project6/exhaustive-list-search.png" target="_blank">
+                        <img src="./img/project6/exhaustive-list-search.png" alt="Exhaustive search list code" class="project-image2 img-fluid d-block" style="height: 100%;">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h4 class="card-header text-center">Enabling New Places API</h4>
+                    <a href="./img/project6/places-new.png" target="_blank">
+                        <img src="./img/project6/places-new.png" alt="New places checklist" class="project-image img-fluid w-100 d-block" style="height: 100%;">
+                    </a>
+                    <a href="./img/project6/places-new.png" target="_blank">
+                        <img src="./img/project6/Prereq-places.png" alt="Prerequisites to use Text Search Maps API" class="project-image img-fluid w-100 d-block mt-3" style="height: 100%;">
+                    </a>
+                </div>
+            </div>
+        </div>
         </div>
 
         <div class="section mb-5">
@@ -172,10 +219,10 @@
             </div>
         </div>
 
-        <div class="col-mb-5">
+        <div class="mb-5">
             <div class="text-center">
                 <a href="./img/project6/Screens-1.png" target="_blank">
-                    <img src="./img/project6/Screens-1.png" alt="Thank You Page Before Update" class="img-fluid rounded">
+                    <img src="./img/project6/Screens-1.png" alt="All activity screens of WorkoutPal" class="img-fluid rounded">
                 </a>
             </div>
         </div>
