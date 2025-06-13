@@ -19,7 +19,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view" target="_blank" rel="noopener noreferrer">Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -30,7 +30,7 @@
         <span style="color: var(--blue);">WorkoutPal</span>
     </h1>
     <h4 class="project-subtitle" style="color: var(--black);">
-        Designing and Developing A UX-Focused Android Workout App
+        Designing and Developing a UX-Focused Android Workout App
     </h4>
 </div>
 
@@ -114,19 +114,19 @@
             <h3 class="mt-4 mb-3">Database Architecture</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <p>The SQLite implementation presented my first major design challenge. Early versions only stored workout names because I underestimated the complexity of relational data in mobile environments. After encountering partial data saves, I had to completely rethink my approach.</p>
+                    <p>Setting up the SQLite database was one of the first major challenges I ran into. At first, the app was only saving workout names. I hadn’t fully considered how difficult it would be to structure and store related data on mobile.</p>
                     
-                    <p>Through Logcat debugging, I identified the root cause: my initial implementation treated each data point (sets, reps, weight) as independent inserts rather than a transactional unit. This led to situations where a workout name would save but the associated exercises wouldn't persist.</p>
+                    <p>By using Logcat to debug, I realized the app was trying to save sets, reps, and weights as separate pieces. They weren’t linked together properly as part of one workout. This caused just the name to save, but the rest of the workout details would go missing.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>The solution involved implementing proper database transactions and adding validation checks. This experience taught me that data architecture decisions directly impact user experience as what good is a workout tracker that loses your progress?</p>
+                    <p>I fixed this by using database transactions and adding checks to make sure all the data was valid before saving. It made me realize that backend decisions impact the user experience just as much as the front end. After all, what good is a workout tracker if it loses your progress?</p>
                 </div>
             </div>
 
             <h3 class="mt-2 mb-3">Sensor Integration</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <p>Incorporating the accelerometer and gyroscope required UX consideration. While the technical implementation was straightforward with Android SensorManager, deciding how to present this data demanded more thought.</p>
+                    <p>Implementing the accelerometer and gyroscope required UX consideration. While the technical implementation was straightforward with Android SensorManager, deciding how to present this data demanded more thought.</p>
                     
                     <p>I ended up positioning the sensor readings at the bottom of the workout activity after testing several layouts. This placement achieved several goals:</p>
                     <ul>
@@ -136,7 +136,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <p>While the sensors were posting output and functioning correctly, their real value would come from better interpretation of the raw data. For example, future versions could analyze movement patterns to detect poor form or count repetitions automatically. The use case for these direct values were more niche and probably more suited to intermediate to advanced level lifters who might want to optimize aspects like bench angles (Using the gyroscope data).</p>
+                    <p>While the sensors were posting output and functioning correctly, their real value would come from better interpretation of the raw data. For example, future versions could analyze movement patterns to detect poor form or count repetitions automatically. The use case for these direct values was more niche and probably more suited to intermediate to advanced level lifters who might want to optimize aspects like bench angles (Using the gyroscope data).</p>
                 </div>
             </div>
 
@@ -147,7 +147,7 @@
                     
                     <p>After switching to SearchByText, I encountered Error 9011 which is an authorization issue that persisted despite having what I believed was proper API key setup. This became an important lesson in thorough documentation review. The solution came when I realized both the legacy and new Places APIs needed enabling in Google Cloud Console, a requirement that wasn't immediately obvious from the error message alone.</p>
                     
-                    <p>This experience reinforced the importance of comprehensive API research before implementation. It also highlighted how technical hurdles can directly impact user experience, had I not resolved this, the entire maps functionality would have been unusable.</p>
+                    <p>This experience reinforced the importance of comprehensive API research before implementation. It also highlighted how technical hurdles can directly impact user experience. If I hadn’t resolved this issue, the entire maps location finding feature would have been unusable.</p>
                 </div>
             </div>
             <div class="row">
