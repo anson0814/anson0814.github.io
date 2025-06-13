@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkoutPal: A UX-Focused Development Case Study</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+        <div class="navbar-brand-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo" width="36" height="60">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container mt-4">
+    <div class="text-center mb-5">
+    <h1 class="project-title">
+        <span style="color: var(--blue);">WorkoutPal</span>
+    </h1>
+    <h2 class="project-subtitle" style="color: var(--black);">
+        Developing A UX-Focused Android Workout App
+    </h2>
+</div>
+
+    <!-- Origins Section with Card (only this section modified) -->
+    <div class="section mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4" style="color: var(--blue);">Inspiration and Problem Space</h2>
+                        <div class="pl-3 pr-3 text-left">  <!-- Only affects this container -->
+                            <p class="mb-3">WorkoutPal emerged from observing a gap in fitness tracking solutions during my IAT359 Mobile Computingcourse. While existing apps offered workout logging, few combined comprehensive data tracking with real-time sensor feedback.</p>
+                            
+                            <p class="mb-3">My vision was to create an Android application specifically tailored for weight training enthusiasts who needed more than basic rep counting.</p>
+                            
+                            <div class="mb-4 pl-3" style="border-left: 3px solid var(--light-blue);">
+                                <p class="font-weight-bold mb-2">The core challenge was balancing three competing priorities:</p>
+                                <ol class="pl-3">
+                                    <li class="mb-2">Creating an intuitive interface for quick gym-floor logging</li>
+                                    <li class="mb-2">Implementing meaningful sensor integration without clutter</li>
+                                    <li>Designing a robust data architecture that would persist complex workout records</li>
+                                </ol>
+                            </div>
+                            
+                            <p>This 13-week project became an exercise in constraint-based design, where each technical decision carried significant UX implications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="section mb-5">
+            <h2 class="text-center mb-4">Technical Implementation and UX Decisions</h2>
+            
+            <h3 class="mt-4 mb-3">Database Architecture</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>The SQLite implementation presented my first major design challenge. Early versions only stored workout names because I underestimated the complexity of relational data in mobile environments. After encountering partial data saves, I had to completely rethink my approach.</p>
+                    
+                    <p>Through Logcat debugging, I identified the root cause: my initial implementation treated each data point (sets, reps, weight) as independent inserts rather than a transactional unit. This led to situations where a workout name would save but the associated exercises wouldn't persist.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>The solution involved implementing proper database transactions and adding validation checks. This experience taught me that data architecture decisions directly impact user experience - what good is a workout tracker that loses your progress? I documented these learnings extensively in my Milestone 2 report, emphasizing the importance of atomic operations for data integrity.</p>
+                </div>
+            </div>
+
+            <h3 class="mt-5 mb-3">Sensor Integration</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Incorporating the accelerometer and gyroscope required careful UX consideration. While the technical implementation was straightforward (thanks to Android's SensorManager), deciding how to present this data demanded more thought.</p>
+                    
+                    <p>I positioned the sensor readouts at the bottom of the workout screen after testing several layouts. This placement achieved several goals:</p>
+                    <ul>
+                        <li>Kept the focus on workout logging (primary task)</li>
+                        <li>Made sensor data glanceable but not distracting</li>
+                        <li>Prevented occlusion of key interface elements</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p>In my final report, I noted that while the sensors functioned correctly, their real value would come from better interpretation of the raw data. For example, future versions could analyze movement patterns to detect poor form or count repetitions automatically. This realization came from observing test users who glanced at the numbers but couldn't derive meaningful insights from the raw sensor output.</p>
+                </div>
+            </div>
+
+            <h3 class="mt-5 mb-3">Maps API Challenges</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>The gym-finding feature evolved significantly through development. My initial approach using FindCurrentPlaceRequest failed because, as I discovered, gym locations don't have consistent tagging like restaurants or banks. This was a valuable lesson in API limitations and the importance of prototyping core features early.</p>
+                    
+                    <p>After switching to SearchByText, I encountered Error 9011 - an authorization issue that persisted despite having what I believed was proper API key setup. This became an important lesson in thorough documentation review. The solution came when I realized both the legacy and new Places APIs needed enabling in Google Cloud Console, a requirement that wasn't immediately obvious from the error message alone.</p>
+                    
+                    <p>This experience reinforced the importance of comprehensive API research before implementation. As noted in my final report, it also highlighted how technical hurdles can directly impact user experience - had I not resolved this, the entire maps functionality would have been unusable.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section mb-5">
+            <h2 class="text-center mb-4">Reflections and Learnings</h2>
+            
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p>Developing WorkoutPal provided profound insights into the relationship between technical implementation and user experience. Several key takeaways emerged from this project:</p>
+                    
+                    <p><strong>1. Data Reliability is a UX Feature:</strong> The database issues taught me that users perceive technical reliability as part of the experience. An app that loses data feels untrustworthy, regardless of how polished the interface appears.</p>
+                    
+                    <p><strong>2. Sensor Data Needs Interpretation:</strong> While implementing the sensors was technically successful, I realized raw data means little to most users. Future implementations would benefit from processed insights rather than direct output.</p>
+                    
+                    <p><strong>3. API Limitations Shape Features:</strong> The Maps API challenges demonstrated how platform constraints can dictate feature design. This experience made me more thoughtful about vetting technical dependencies early in the design process.</p>
+                    
+                    <p>As documented in my final report, these learnings have fundamentally changed how I approach mobile projects. I now prioritize data architecture planning and API research much earlier in my process, recognizing how these technical elements form the foundation of good user experiences.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- [Footer remains unchanged] -->
+    </div>
+</body>
+</html>
