@@ -28,9 +28,9 @@
     <h1 class="project-title">
         <span style="color: var(--blue);">WorkoutPal</span>
     </h1>
-    <h2 class="project-subtitle" style="color: var(--black);">
-        Developing A UX-Focused Android Workout App
-    </h2>
+    <h3 class="project-subtitle" style="color: var(--black);">
+        Designing and Developing A UX-Focused Android Workout App
+    </h3>
 </div>
 
     <!-- Origins Section with Card (only this section modified) -->
@@ -41,20 +41,21 @@
                     <div class="card-body">
                         <h2 class="text-center mb-4" style="color: var(--blue);">Inspiration and Problem Space</h2>
                         <div class="pl-3 pr-3 text-left">  <!-- Only affects this container -->
-                            <p class="mb-3">WorkoutPal emerged from observing a gap in fitness tracking solutions during my IAT359 Mobile Computingcourse. While existing apps offered workout logging, few combined comprehensive data tracking with real-time sensor feedback.</p>
+                            <p class="mb-3">
+                                Many gym-goers still rely on pen-and-paper or basic notes apps to track workouts and this manual approach is inconvenient and lacks structure. WorkoutPal was conceptualized to streamline this experience, especially among beginners and intermediate users. The goal was to design and build a mobile application that combines intelligent workout logging with sensor-based feedback and clean visual data representation, all within the constraints of a 13-week course. <br>
+
                             
                             <p class="mb-3">My vision was to create an Android application specifically tailored for weight training enthusiasts who needed more than basic rep counting.</p>
                             
                             <div class="mb-4 pl-3" style="border-left: 3px solid var(--light-blue);">
                                 <p class="font-weight-bold mb-2">The core challenge was balancing three competing priorities:</p>
                                 <ol class="pl-3">
-                                    <li class="mb-2">Creating an intuitive interface for quick gym-floor logging</li>
-                                    <li class="mb-2">Implementing meaningful sensor integration without clutter</li>
+                                    <li class="mb-2">Creating an intuitive interface for quick exercise logging</li>
+                                    <li class="mb-2">Implementing meaningful sensor integration</li>
                                     <li>Designing a robust data architecture that would persist complex workout records</li>
                                 </ol>
                             </div>
                             
-                            <p>This 13-week project became an exercise in constraint-based design, where each technical decision carried significant UX implications.</p>
                         </div>
                     </div>
                 </div>
@@ -107,19 +108,64 @@
         </div>
 
         <div class="section mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center mb-4">Final App Activities/Screens</h2>
+                            <div class="text-left pl-3 pr-3">
+                                <p class="mb-3">
+                                    The app's main features were split across multiple Activities:
+                                </p>
+                                
+                                <ul class="main-list mb-4">
+                                    <li class="mb-2">
+                                        <strong>MainActivity:</strong> Color theme toggle (saved via SharedPreferences), 
+                                        navigation to Preset Workouts and Map Activity
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>WorkoutActivity:</strong> Core functionality — add/edit exercises, 
+                                        customize reps/sets/weights, timer functionality, and real-time sensor data 
+                                        display (accelerometer + gyroscope)
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>WorkoutHistoryActivity:</strong> Retrieve and view workout logs via 
+                                        SQLite. Supports long-press deletion and sharing through implicit intents
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>MapActivity:</strong> Uses Maps & Places API to display nearby gym 
+                                        locations with SearchByText()
+                                    </li>
+                                    <li>
+                                        <strong>StartWorkout Widget:</strong> Added for quick access to WorkoutActivity 
+                                        (bonus feature)
+                                    </li>
+                                </ul>
+                                
+                                <p>
+                                    These components were implemented incrementally, with a priority placed on 
+                                    functionality first and refined UI second.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section mb-6">
             <h2 class="text-center mb-4">Reflections and Learnings</h2>
             
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <p>Developing WorkoutPal provided profound insights into the relationship between technical implementation and user experience. Several key takeaways emerged from this project:</p>
+                    <p>Developing WorkoutPal taught me a lot about the relationship between technical implementation and user experience. Several key takeaways emerged from this project:</p>
                     
                     <p><strong>1. Data Reliability is a UX Feature:</strong> The database issues taught me that users perceive technical reliability as part of the experience. An app that loses data feels untrustworthy, regardless of how polished the interface appears.</p>
                     
-                    <p><strong>2. Sensor Data Needs Interpretation:</strong> While implementing the sensors was technically successful, I realized raw data means little to most users. Future implementations would benefit from processed insights rather than direct output.</p>
+                    <p><strong>2. Sensor Data Needs Interpretation:</strong> While implementing the sensors was technically successful, I realized raw data means little to most users. Future implementations would benefit from processed insights rather than direct output of the sensor values.</p>
                     
-                    <p><strong>3. API Limitations Shape Features:</strong> The Maps API challenges demonstrated how platform constraints can dictate feature design. This experience made me more thoughtful about vetting technical dependencies early in the design process.</p>
+                    <p><strong>3. API Limitations Shape Features:</strong> The Maps API challenges demonstrated how platform constraints can limit feature design. This experience made me more thoughtful about having technical dependencies early in the design process.</p>
                     
-                    <p>As documented in my final report, these learnings have fundamentally changed how I approach mobile projects. I now prioritize data architecture planning and API research much earlier in my process, recognizing how these technical elements form the foundation of good user experiences.</p>
                 </div>
             </div>
         </div>
