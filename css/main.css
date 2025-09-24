@@ -112,9 +112,9 @@
 
   .lead{
     padding-bottom: 1rem;
-    font-weight: 400;
-    color: #333333;
-    font-size: 1.25rem;
+    font-weight: 450;
+    color: #fff;
+    font-size: 1.5rem;
   }
 
   /* FOOTER */
@@ -220,13 +220,31 @@
     /*text-decoration: underline;*/
   }
 
-  .header-bg {
-    background-image: url("../img/whitegray.jpg"); /*Image by rawpixel.com</a> on Freepik https://www.freepik.com/free-vector/white-gray-hexagon-pattern-background_16398206.html*/
-    background-size: cover; 
-    border-radius: 0;
-    
-  }
+.header-bg {
+  position: relative;
+  background-image: url("../img/vancouver.jpg"); /* background image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  padding: 8rem 2rem;
+  color: #fff;
+  z-index: 0;
+}
 
+/* Dark overlay */
+.header-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* pure black, 60% opacity */
+  z-index: 1;
+}
+
+/* Ensure content is above overlay */
+.header-bg > * {
+  position: relative;
+  z-index: 2;
+}
   .header-text{
     margin-bottom: 1.5rem;
   }
@@ -240,6 +258,7 @@
 
   .about-content {
       text-align: center; 
+      color: #fff
   }
 
   .about-title {
@@ -390,10 +409,69 @@
   .jumbotron {
     margin: 0;
   }
-    
 
   /*Citation Styles*/
   .citation-container{
     margin-bottom: 3rem;
   }
   
+  /*Hero Buttons*/
+  .cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cta-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cta-buttons .btn-primary {
+  background-color: #03aaff;
+  border-color: #03aaff;
+  color: #fff;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #0288d1;
+  border-color: #0288d1;
+  color: #fff;
+}
+
+.cta-buttons .btn-outline-light {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+.cta-buttons .btn-outline-light:hover {
+  background-color: #03aaff;
+  border-color: #03aaff;
+  color: #fff;
+}
+
+.cta-buttons svg {
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+@media (max-width: 575.98px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
