@@ -704,6 +704,7 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  height: 100%; /* Ensure link takes full height */
 }
 
 #portfolio .card-link:hover {
@@ -724,6 +725,9 @@
   overflow: hidden;
   background: #fff;
   cursor: pointer;
+  height: 100%; /* Key for equal heights */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack content vertically */
 }
 
 #portfolio .card:hover {
@@ -737,18 +741,47 @@
   border-top-right-radius: 20px;
   object-fit: cover;
   height: 220px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+#portfolio .card-body {
+  flex-grow: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem; /* Add consistent padding */
 }
 
 #portfolio .card-title {
   font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: -0.5px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem; /* Slightly more space */
+  flex-shrink: 0; /* Don't shrink title */
 }
 
 #portfolio .card-text {
   color: #9098a1;
   font-size: 1rem;
+  flex-grow: 1; /* Text takes remaining space */
+  margin-bottom: 0; /* Remove default margin */
+}
+
+/* Ensure consistent column heights */
+#portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#portfolio .col-md-4 {
+  display: flex;
+  margin-bottom: 2rem; /* Space between rows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  #portfolio .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 
