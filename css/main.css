@@ -382,28 +382,25 @@
   }
 
   /* CARD STYLES */
+/* Scoped styles for project cards in #portfolio */
 
-  .card-link {
+#portfolio .card-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-.card-link:hover {
+#portfolio .card-link:hover {
   text-decoration: none;
   color: inherit;
 }
-.card-link:hover .card-title {
+
+#portfolio .card-link:hover .card-title {
   color: var(--blue);
   transition: color 0.2s;
 }
-/* Soft shadow glow on hover */
-.card-link:hover .card {
-  box-shadow: 0 8px 40px 0 rgba(0,170,255,0.15), 0 12px 36px rgba(0,0,0,0.15);
-}
 
-
-.card {
+#portfolio .card {
   border-radius: 20px;
   border: none;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
@@ -413,31 +410,30 @@
   cursor: pointer;
 }
 
-.card:hover {
+#portfolio .card:hover {
   transform: scale(1.025) rotate(-1deg);
   box-shadow: 0 12px 36px rgba(0,0,0,0.12);
   z-index: 2;
 }
 
-.card-img-top {
+#portfolio .card-img-top {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
   height: 220px;
 }
 
-.card-title {
+#portfolio .card-title {
   font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 0.25rem;
 }
 
-.card-text {
+#portfolio .card-text {
   color: #9098a1;
   font-size: 1rem;
 }
-
 
 
   @media (max-width: 992px) {
