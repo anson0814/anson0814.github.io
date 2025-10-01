@@ -254,6 +254,18 @@
     height: 2.5rem;
   }
 
+  /* Sticky footer for short pages */
+.sticky-footer-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
   .bootstrap-link {
     transition: color 0.3s ease; 
 }
