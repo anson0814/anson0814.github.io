@@ -341,7 +341,7 @@
 
 /* Always some top space on hero */
 .hero-modern .profile-img {
-  margin-top: 2rem;
+  margin-top: clamp(2.5rem, 8vw, 5rem);
 }
 
 /* Mobile: space between navbar and profile image */
