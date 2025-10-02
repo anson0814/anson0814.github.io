@@ -202,32 +202,6 @@
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-      <script>
-        function setHeroHeight() {
-            var navbar = document.querySelector('nav.navbar');
-            var hero = document.querySelector('.jumbotron.header-bg.hero-modern');
-            if (navbar && hero) {
-              // Get computed navbar height (may change with zoom)
-              var navbarRect = navbar.getBoundingClientRect();
-              var navbarHeight = navbarRect.height;
-              hero.style.minHeight = `calc(100vh - ${navbarHeight}px)`;
-            }
-          }
-
-          // Listen for zoom (resize covers some zoom/builds)
-          // But also run on font load and after images
-          window.addEventListener('resize', setHeroHeight);
-          window.addEventListener('DOMContentLoaded', setHeroHeight);
-          window.addEventListener('load', setHeroHeight);
-          // Also re-run if window orientation changes
-          window.addEventListener('orientationchange', setHeroHeight);
-
-
-      </script>
-
-
-      
 </body>
 </html>
 
