@@ -203,6 +203,23 @@
       <script src="path/to/bootstrap.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <script>
+        function setHeroHeight() {
+          var navbar = document.querySelector('nav.navbar');
+          var hero = document.querySelector('.jumbotron.header-bg.hero-modern');
+          if (navbar && hero) {
+            var navbarHeight = navbar.offsetHeight;
+            hero.style.minHeight = `calc(100vh - ${navbarHeight}px)`;
+          }
+        }
+
+        window.addEventListener('resize', setHeroHeight);
+        window.addEventListener('load', setHeroHeight);
+      </script>
+
+
+      
 </body>
 </html>
 

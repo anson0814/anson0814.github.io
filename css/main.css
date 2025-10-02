@@ -303,36 +303,49 @@
     /*text-decoration: underline;*/
   }
 
-.header-bg {
+.jumbotron.header-bg.hero-modern {
   position: relative;
-  background-image: url("../img/vancouver.jpg"); /* background image */
+  background-image: url("../img/vancouver.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 0;
-  padding: 8rem 2rem;
+  padding: 0 2rem;
   color: #fff;
   z-index: 0;
+
+  /* Subtract navbar height */
+  min-height: calc(100vh - 56px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 /* Dark overlay */
-.header-bg::before {
+.jumbotron.header-bg.hero-modern::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* pure black, 60% opacity */
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 
 /* Ensure content is above overlay */
-.header-bg > * {
+.jumbotron.header-bg.hero-modern > * {
   position: relative;
   z-index: 2;
 }
-  .header-text{
-    margin-bottom: 1.5rem;
+
+/* Mobile: space between navbar and profile image */
+@media (max-width: 576px) {
+  .hero-modern .profile-img {
+    margin-top: 2.5rem !important;
   }
+}
+
 
 /* About Page Styles - Global Font */
 .about-container,
