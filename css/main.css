@@ -339,10 +339,15 @@
   z-index: 2;
 }
 
+/* Always some top space on hero */
+.hero-modern .profile-img {
+  margin-top: 2rem;
+}
+
 /* Mobile: space between navbar and profile image */
 @media (max-width: 576px) {
-  .hero-modern .profile-img {
-    margin-top: 2.5rem !important;
+  .jumbotron.header-bg.hero-modern {
+    padding-top: 4rem !important; /* ensures space above the image */
   }
 }
 
