@@ -502,9 +502,23 @@
 }
 
 .experience-icon {
-  background: var(--blue);
-  color: white;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px; 
+  padding: 8px;
 }
+
+.company-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 
 .education-icon {
   background: #e0f2fe;
