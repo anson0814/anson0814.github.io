@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/logo.svg" />
+    <title>Visual Design | Anson Lin</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="page-fade-in">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+        <div class="navbar-brand-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Your Logo" width="36" height="60">
+            </a>
+        </div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://drive.google.com/file/d/15ANXeB6tqhc7tVxG2RV_KDApBmCl0Hx0/view" target="_blank" rel="noopener noreferrer">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="container mt-5 pt-4 text-center">
+        <h1 class="project-title" style="font-size: var(--font-size-medium-1);">Visual & Graphic Design</h1>
+        <p class="about-subtitle mx-auto">Click any image to view full scale in a new tab.</p>
+        <div class="mx-auto mb-5" style="width: 80px; height: 3px; background-color: var(--blue); border-radius: 3px"></div>
+    </header>
+
+    <main class="collage-container container">
+        <div class="masonry-grid">
+
+            <!-- 1. Marine Atlantic CAROUSEL -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselMarine" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/marine-atlantic-1.png" target="_blank">
+                                    <img src="./img/Graphic-Design/marine-atlantic-1.png" class="enlarge-img" alt="Marine Atlantic 1">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/marine-atlantic-2.png" target="_blank">
+                                    <img src="./img/Graphic-Design/marine-atlantic-2.png" class="enlarge-img" alt="Marine Atlantic 2">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselMarine" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselMarine" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Marketing</span>
+                        <h4 class="design-title">Marine Atlantic Case Study</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Infographic -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/why-web-only-in-2025.png" target="_blank">
+                        <img src="./img/Graphic-Design/why-web-only-in-2025.png" class="enlarge-img" alt="Infographic">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">Information Design</span>
+                        <h4 class="design-title">B2B Strategy Infographic</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Viking Portal CAROUSEL -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselViking" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/viking-portal-1.jpg" target="_blank">
+                                    <img src="./img/Graphic-Design/viking-portal-1.jpg" class="enlarge-img" alt="Viking 1">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/viking-portal-2.jpg" target="_blank">
+                                    <img src="./img/Graphic-Design/viking-portal-2.jpg" class="enlarge-img" alt="Viking 2">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselViking" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselViking" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">UI Design</span>
+                        <h4 class="design-title">Viking Cruises Onboard Portal</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Launch Templates -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselLaunchTemplates" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <!-- Original Image -->
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/launch-templates.png" target="_blank">
+                                    <img src="./img/Graphic-Design/launch-templates.png" class="enlarge-img" alt="Templates Overview">
+                                </a>
+                            </div>
+                            <!-- New Image 1 -->
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/launch-templates-2.png" target="_blank">
+                                    <img src="./img/Graphic-Design/launch-templates-2.png" class="enlarge-img" alt="Launch Template 2">
+                                </a>
+                            </div>
+                            <!-- New Image 2 -->
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/launch-templates-3.png" target="_blank">
+                                    <img src="./img/Graphic-Design/launch-templates-3.png" class="enlarge-img" alt="Launch Template 3">
+                                </a>
+                            </div>
+                            <!-- New Image 3 -->
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/launch-templates-4.png" target="_blank">
+                                    <img src="./img/Graphic-Design/launch-templates-4.png" class="enlarge-img" alt="Launch Template 4">
+                                </a>
+                            </div>
+                            <!-- New Image 4 -->
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/launch-templates-5.png" target="_blank">
+                                    <img src="./img/Graphic-Design/launch-templates-5.png" class="enlarge-img" alt="Launch Template 5">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselLaunchTemplates" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselLaunchTemplates" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Templates</span>
+                        <h4 class="design-title">Branded Editions Launch Social Post Templates</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. HKJC Portal -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/hkjc-portal.png" target="_blank">
+                        <img src="./img/Graphic-Design/hkjc-portal.png" class="enlarge-img" alt="HKJC">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">UI Design</span>
+                        <h4 class="design-title">HKJC Digital Portal</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Banner Collage -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselLinkedinBanner" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/be-banner-collage.png" target="_blank">
+                                    <img src="./img/Graphic-Design/be-banner-collage.png" class="enlarge-img" alt="Banner 1">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/be-banner-collage-2.png" target="_blank">
+                                    <img src="./img/Graphic-Design/be-banner-collage-2.png" class="enlarge-img" alt="Banner 2">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/be-banner-collage-3.png" target="_blank">
+                                    <img src="./img/Graphic-Design/be-banner-collage-3.png" class="enlarge-img" alt="Banner 3">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/be-banner-collage-4.png" target="_blank">
+                                    <img src="./img/Graphic-Design/be-banner-collage-4.png" class="enlarge-img" alt="Banner 4">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="design-overlay">
+                            <span class="design-category">Social Media</span>
+                            <h4 class="design-title">Branded Editions LinkedIn Banner</h4>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselLinkedinBanner" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselLinkedinBanner" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Not All Replicas -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/not-all-replicas.jpg" target="_blank">
+                        <img src="./img/Graphic-Design/not-all-replicas.jpg" class="enlarge-img" alt="Strategy">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">Graphic Design Print</span>
+                        <h4 class="design-title">BE Event Poster</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Visa Flyer -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/Visa-Digital_Page_1.jpg" target="_blank">
+                        <img src="./img/Graphic-Design/Visa-Digital_Page_1.jpg" class="enlarge-img" alt="Visa Flyer">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">Graphic Design Print</span>
+                        <h4 class="design-title">Visa PressReader Flyer</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. EFA Banner -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/EFA-AppBanner-1.png" target="_blank">
+                        <img src="./img/Graphic-Design/EFA-AppBanner-1.png" class="enlarge-img" alt="EFA Banner">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">Graphic Design</span>
+                        <h4 class="design-title">PressReader EFA Event Banner</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Newsletter Asset CAROUSEL -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselNewsletter" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/newsletter-1.png" target="_blank">
+                                    <img src="./img/Graphic-Design/newsletter-1.png" class="enlarge-img" alt="Newsletter 1">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/newsletter-2.png" target="_blank">
+                                    <img src="./img/Graphic-Design/newsletter-2.png" class="enlarge-img" alt="Newsletter 2">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/newsletter-3.png" target="_blank">
+                                    <img src="./img/Graphic-Design/newsletter-3.png" class="enlarge-img" alt="Newsletter 3">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselNewsletter" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselNewsletter" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Graphic Design</span>
+                        <h4 class="design-title">Newsletter Assets</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. BE Banner CAROUSEL -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <div id="carouselEventBanner" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="./img/Graphic-Design/BE-banner_SCMP.jpg" target="_blank">
+                                    <img src="./img/Graphic-Design/BE-banner_SCMP.jpg" class="enlarge-img" alt="Event Banner 1">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="./img/Graphic-Design/BE-banner_SCMP2.jpg" target="_blank">
+                                    <img src="./img/Graphic-Design/BE-banner_SCMP2.jpg" class="enlarge-img" alt="Event Banner 2">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselEventBanner" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a class="carousel-control-next" href="#carouselEventBanner" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Graphic Design</span>
+                        <h4 class="design-title">BE Event Banner</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Editions Plus -->
+            <div class="design-item" data-aos="fade-up">
+                <div class="design-card">
+                    <a href="./img/Graphic-Design/editions-plus.png" target="_blank">
+                        <img src="./img/Graphic-Design/editions-plus.png" class="enlarge-img" alt="Editions Plus">
+                    </a>
+                    <div class="design-overlay">
+                        <span class="design-category">Product</span>
+                        <h4 class="design-title">Editions+ Feature Overview</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <a href="styleguide.html">
+              <h3 class="bootstrap-link">Style Guide</h3>
+            </a>
+          
+          </div>
+
+          <div class="footer-section">
+            <a href="resources.html">
+              <h3 class="bootstrap-link">Resources</h3>
+            </a>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:ansonlin814@outlook.com">ansonlin814@outlook.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (604) 366-8928</a></p>
+          </div>          
+
+        <div class="row">
+          <ul class="footer__social-links">
+            <li class="footer__social-link-item">
+              <a href="https://github.com/anson0814" title="Link to Github Profile">
+                <img src="./img/github.svg" class="footer__social-image" alt="Github">
+              </a>
+            </li>
+            <li class="footer__social-link-item">
+              <a href="https://www.linkedin.com/in/anson0814/">
+                <img src="./img/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Animation
+        AOS.init({ once: true, duration: 800 });
+    </script>
+
+</body>
+</html>
